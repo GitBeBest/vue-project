@@ -13,7 +13,7 @@
 
 <script>
 export default{
-  name: 'recommend',
+  name: 'recommend-top',
   data () {
     return {
       items :[

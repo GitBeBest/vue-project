@@ -3,8 +3,8 @@
         <div class="head-banner">
             <swiper :imgs="imgs"></swiper>
         </div>
-        <div class="found-recommend">
-            <recommend></recommend>
+        <div class="found-recommend-top">
+            <RecommendTop></RecommendTop>
         </div>
         <div class="found-list">
             <TypeList></TypeList>
@@ -14,6 +14,9 @@
 
 <script>
 import swiper from './banner.vue'
+import RecommendTop from './recommend_top.vue'
+import TypeList from './recommend_type.vue'
+
 export default{
     name: 'recommend',
     data () {
@@ -28,7 +31,9 @@ export default{
         }
     },
     components: {
-        swiper
+        swiper,
+        RecommendTop,
+        TypeList
     },
     methods: {
 
@@ -40,5 +45,29 @@ export default{
 .found-recommend{
     width: 100%;
     height: 100%;
+}
+
+.head-banner{
+    height: 20%;
+    width: 100%;
+    background-color: #e5e8e8;
+}
+.found-recommend-top{
+    height: 20%;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #e5e8e8;
+}
+.found-list{
+    margin-top: 10px;
+    height: 40%;
+    width: 100%;
+    background-color: #e5e8e8;
+}
+.found-tip{
+    margin-top: 10px;
+    height: 5%;
+    width: 100%;
+    background-color: #e5e8e8;
 }
 </style>

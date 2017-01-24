@@ -3,18 +3,15 @@
     <div class="main">
       <router-view></router-view>
     </div>
-    <VFoot></VFoot>
   </div>
 </template>
 
 <script>
 // import Hello from './components/Hello'
-import VFoot from './components/footer.vue'
 export default {
   name: 'app',
   components: {
     // Hello
-    VFoot
   }
 }
 </script>
