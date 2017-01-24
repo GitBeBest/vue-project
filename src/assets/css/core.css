@@ -1,6 +1,7 @@
 .m-top{
     z-index: 1000;
-    height: 70px;
+    height: 40px;
+    width: 100%;
     background-position: 0 -80px;
     background-repeat: repeat-x;
 }
@@ -13,14 +14,17 @@
 .m-top .wrap .m-radio-in{
     float: left;
     width: 10%;
+    margin-left: 10px;
 }
 
 .m-top .wrap .m-search{
     float: left;
     width: 70%;
+    margin-left: 10px;
 }
 
 .m-top .wrap .m-listen{
     float: left;
     width: 10%;
+    margin-left: 10px;
 }

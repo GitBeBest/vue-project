@@ -1,11 +1,54 @@
 <template>
-    <footer class="footer" :class="{'go-back': !showNav}">
+    <footer class="footer">
+        <div class="m-body-nav">
+            <ul class="foot-nav">
+                <li v-for="item in items">
+                    <div class="foot-nav-icon">
+
+                    </div>
+                    <p class="foot-nav-title">
+                        {{ item.name }}
+                    </p>
+                </li>
+            </ul>
+        </div>
     </footer>
 </template>
 
 <script>
+import { Navbar, TabItem } from 'mint-ui'
 export default{
   name: 'footer',
+  data () {
+    return {
+      items: [
+        {
+           name: '发现音乐',
+           icon: '',
+           actionUrl: '',
+        },
+        {
+           name: '我的音乐',
+           icon: '',
+           actionUrl: '',
+        },
+        {
+           name: '朋友',
+           icon: '',
+           actionUrl: ''
+        },
+        {
+           name: '帐号',
+           icon: '',
+           actionUrl: ''
+        }
+      ]
+    }
+  },
+  components: {
+    Navbar,
+    TabItem
+  },
   props: {
     'showNav': {
       type: Boolean,
@@ -33,9 +76,29 @@ export default{
     bottom: 0px;
     height: 50px;
     display: -webkit-box;
-    padding-top: 7px;
+    padding-bottom: 7px;
     box-sizing: border-box;
-    z-index: 10000;
+    z-index: 10;
+}
+.m-body-nav{
+    width: 100%;
+}
+
+.m-body-nav ul li{
+    float: left;
+    display: inline;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+.container{
+    position: fixed;
+    width: 100%;
+}
+
+.fb-nav-header{
+    position: fixed;
+    width: 25%;
 }
 .footer nav {
     -webkit-box-flex: 1;

@@ -3,16 +3,18 @@
     <div class="main">
       <router-view></router-view>
     </div>
+    <VFoot></VFoot>
   </div>
 </template>
 
 <script>
 // import Hello from './components/Hello'
-
+import VFoot from './components/footer.vue'
 export default {
   name: 'app',
   components: {
     // Hello
+    VFoot
   }
 }
 </script>
@@ -49,11 +51,12 @@ body{
 }
 
 .main{
-  height: 400px;
-  margin-left: 180px;
-  margin-right: 25px;
+  height: 100%;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
 }
-#app {
+.app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
