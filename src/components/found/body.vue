@@ -1,27 +1,58 @@
 <template>
-    <section class="body">
-        <div class="m-body">
-            <mt-navbar v-model="headNav" class="container">
-                <mt-tab-item id="head-nav1" @click.native="goRouter(1)">新歌</mt-tab-item>
-                <mt-tab-item id="head-nav2" @click.native="goRouter(2)">排行</mt-tab-item>
-                <mt-tab-item id="head-nav3" @click.native="goRouter(3)">歌单</mt-tab-item>
-                <mt-tab-item id="head-nav4" @click.native="goRouter(4)">歌手</mt-tab-item>
-                <mt-tab-item id="head-nav5" @click.native="goRouter(5)">彩铃</mt-tab-item>
-            </mt-navbar>
+    <div class="found-body">
+        <div class="head-nav">
+            <HeadNav v-on:message="updateStatus"></HeadNav>
         </div>
-    </section>
+        <div v-if="status === 1">
+            <FoundSong></FoundSong>
+        </div>
+        <div v-else-if="status === 2">
+            <FoundFm></FoundFm>
+        </div>
+        <div v-else-if="status === 3">
+            <FoundRank></FoundRank>
+        </div>
+        <div v-else>
+            <FoundRecommend></FoundRecommend>
+        </div>
+    </div>
 </template>
 
 <script>
-import { Navbar,TabItem } from 'mint-ui'
+import HeadNav from './head_nav.vue'
+import FoundRecommend from './recommend/recommend.vue'
+import FoundSong from './song/song.vue'
+import FoundFm from './fm/fm.vue'
+import FoundRank from './rank/rank.vue'
+
 export default{
-  name: 'found-header',
+  name: 'found-body',
   data () {
-    return {}
+    return {
+      status: 0
+    }
   },
   components: {
-    Navbar,
-    TabItem
+    HeadNav,
+    FoundRecommend,
+    FoundSong,
+    FoundFm,
+    FoundRank
+  },
+  methods: {
+      updateStatus: function (status){
+          this.status = status
+      }
+  },
+  mounted () {
+
   }
 }
 </script>
+<style>
+.head-nav{
+    height: 25px;
+    width: 100%;
+    background-color: #e5e8e8;
+}
+</style>

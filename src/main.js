@@ -5,13 +5,14 @@ import App from './App'
 import router from './router'
 import VueResource from 'vue-resource'
 
-Vue.use(VueResource)
+import './assets/css/swiper-3.4.1.min.css'
 
+Vue.use(VueResource)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  render: h => h(App),
-  template: '<App/>',
-  components: { App }
+  render: h => h(App)
 })
+
+console.log(router)

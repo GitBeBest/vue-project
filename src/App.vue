@@ -8,7 +8,6 @@
 
 <script>
 // import Hello from './components/Hello'
-
 export default {
   name: 'app',
   components: {
@@ -49,11 +48,12 @@ body{
 }
 
 .main{
-  height: 400px;
-  margin-left: 180px;
-  margin-right: 25px;
+  height: 100%;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
 }
-#app {
+.app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
