@@ -52,4 +52,9 @@ img {
     width: 100%;
     height: auto;
 }
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
 </style>
