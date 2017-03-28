@@ -3,7 +3,7 @@
     <div id="found">
         <FoundHeader></FoundHeader>
         <FoundBody></FoundBody>
-        <VFoot></VFoot>
+        <MyFoot></MyFoot>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
 <script>
   import FoundHeader from '../../components/found/header.vue'
   import FoundBody from '../../components/found/body.vue'
-  import VFoot from '../../components/footer.vue'
+  import MyFoot from '../../components/footer.vue'
   export default{
     name: 'found',
     data () {
@@ -20,7 +20,7 @@
     components: {
       FoundHeader,
       FoundBody,
-      VFoot
+      MyFoot
     }
   }
 </script>

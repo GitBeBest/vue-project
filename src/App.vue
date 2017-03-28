@@ -50,15 +50,15 @@ body{
 .main{
   height: 100%;
   width: 100%;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
 }
 .app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background-color: lightblue;
   margin-top: 60px;
 }
 </style>

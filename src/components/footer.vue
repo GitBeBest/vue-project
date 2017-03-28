@@ -6,7 +6,7 @@
                     <div class="foot-nav-icon">
 
                     </div>
-                    <p class="foot-nav-title">
+                    <p class="foot-nav-title" v-bind:id="item.id" v-on:click="showPage(item.id)">
                         {{ item.name }}
                     </p>
                 </li>
@@ -18,31 +18,36 @@
 <script>
 import { Navbar, TabItem } from 'mint-ui'
 export default{
-  name: 'footer',
+  name: 'MyFoot',
   data () {
     return {
       items: [
         {
            name: '发现音乐',
+           id: '0',
            icon: '',
-           actionUrl: '',
+           actionUrl: '/found',
         },
         {
            name: '我的音乐',
+           id: '1',
            icon: '',
-           actionUrl: '',
+           actionUrl: '/my-music',
         },
         {
            name: '朋友',
+           id: '2',
            icon: '',
-           actionUrl: ''
+           actionUrl: '/my-friends'
         },
         {
            name: '帐号',
+           id: '3',
            icon: '',
-           actionUrl: ''
+           actionUrl: '/my-account'
         }
-      ]
+      ],
+      active_index: 0
     }
   },
   components: {
@@ -63,6 +68,9 @@ export default{
   methods: {
     goBack () {
       this.$router.back()
+    },
+    showPage(index) {
+        this.$router.push({path: this.items[index].actionUrl});
     }
   }
 }

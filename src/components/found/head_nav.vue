@@ -1,7 +1,7 @@
 <template>
     <div class="m-body-nav">
         <ul class="f-head-top">
-            <li v-for="item in items" @click="setIndex(item.index)">
+            <li class="f-head-li" v-for="item in items" v-on:click="setIndex(item.index)">
                 {{ item.title}}
             </li>
         </ul>
@@ -62,6 +62,7 @@ export default{
   }
 }
 </script>
+
 <style>
 .m-body{
     width: 100%;
@@ -83,5 +84,9 @@ export default{
 }
 .mint-tab-item-label {
     font-size: 16px !important;
+}
+
+.f-head-li{
+
 }
 </style>

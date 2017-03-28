@@ -2,15 +2,15 @@
     <div class="m-top">
         <div class="wrap">
             <div class="m-radio-in">
-                <a href="/#">ting</a>
+                <span class="">ting</span>
             </div>
             <div class="m-search">
                 <span>
-                    <input id="song" placeholder="单曲/歌手/专辑/歌单/MV" style="opacity: 1;width: 100%;"/>
+                    <input id="song" class="m-search-input" placeholder="单曲/歌手/专辑/歌单/MV"/>
                 </span>
             </div>
             <div class="m-listen">
-                <a href="/#">ting</a>
+                <span class="">ting</span>
             </div>
         </div>
     </div>
@@ -26,5 +26,13 @@ export default{
 </script>
 
 <style scoped>
-    @import '../../assets/css/core.css'
+    @import '../../assets/css/core.css';
+    .m-search-input{
+        opacity: 1;
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
 </style>

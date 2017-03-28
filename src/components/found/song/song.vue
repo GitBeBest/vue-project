@@ -102,7 +102,6 @@ export default{
   width: 25px;
   height: 25px;
   float:left;
-  background: url("../../../assets/images/found/best.png") no-repeat;
   background-size: contain;
 }
 .song-best-des{
